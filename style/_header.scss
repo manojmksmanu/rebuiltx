@@ -1,0 +1,84 @@
+.navbar {
+    width: 100%;
+    position: fixed;
+    z-index: 2000;
+    top: 0;
+    transition: all 0.3s ease;
+    display: flex;
+    padding: 10px 0;
+    background-color: #2d2e2e;
+  
+    nav {
+        width: 90vw;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: auto;
+        
+        .menu-btn{ filter: invert(1);
+       }
+        ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            position: relative;
+            .cancel-btn {
+              z-index: 10000000;
+                position: absolute;
+                right: 30px;
+                top: 20px;
+                filter: invert(1);
+              }
+              li {
+                padding-left: 25px;
+                a {
+                    font-weight: 200;
+                    font-size: 20px;
+                    text-decoration: none;
+                    font-family: "Poppins", sans-serif;
+                    color: #ffffff;
+                    position: relative;
+                    &::after{
+                        content: "";
+                        position: absolute;
+                        background-color:$primaryColor;
+                        border-radius: 10px;
+                        height: 2px;
+                        width: 0px;
+                        left: 0px;
+                        bottom: -6px;
+                        transition: 0.3s;
+                      }
+                      &:hover::after{
+                        width: 100%;
+                      }
+                  }
+              }
+          }
+      }
+      .logo {
+        width: 60px;
+        filter: invert(1);
+        
+      }
+  
+  }
+  .navbar.sticky {
+    background: #ffffff;
+    padding: 10px 0;
+    box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.1);
+    top: 0px;
+   
+    a{
+      color: rgb(26, 26, 26);
+    }
+    .icon{
+     
+      display: none;
+  }
+ 
+  }
+  .icon{
+    display: none;
+}
+

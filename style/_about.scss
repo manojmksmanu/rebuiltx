@@ -1,0 +1,99 @@
+.about-us{
+    background: $bg-secondary;
+    position: relative;
+    z-index: 0;
+    overflow: hidden;
+    align-items: center;
+    height: 90vh;
+    .about-container{
+        padding-top: 10rem;
+        margin: auto;
+    max-width: 80%;
+        display: flex;
+        height: auto;
+        justify-content: space-around;
+        .ab-right{
+            width:40%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+              img{
+                width: 100%;
+                
+            }
+        }
+        .ab-left{
+            width: 50%;
+            margin-right: 4rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            h2{
+                text-align:start;
+                font-size: 3rem;
+                color: $primaryColor;
+                
+            }
+            p{
+                text-align: justify;
+                font-size: 1.5rem;
+                line-height: 3rem;
+                margin-bottom: 2rem 0;
+            }
+            a.button {
+                margin-left: 0px;
+                font-size: 3rem;
+            }
+            a{
+                margin-top: 2rem;
+            }
+            .arrow {
+                color: $primaryColor;
+                background-color: none;
+                
+              
+              
+            
+                &::after {
+                    display: inline-block;
+                    content: "\0279E"; // arrow right unicode
+                    -webkit-transition: transform 0.3s ease-out;
+                    -moz-transition: transform 0.3s ease-out;
+                    -ms-transition: transform 0.3s ease-out;
+                    -o-transition: transform 0.3s ease-out;
+                    transition: transform 0.3s ease-out;
+                }
+            
+                &:hover {
+                 
+            
+                    &::after {
+                        -webkit-transform: translateX(4px);
+                        -moz-transform: translateX(4px);
+                        -ms-transform: translateX(4px);
+                        -o-transform: translateX(4px);
+                        transform: translateX(4px);
+                    }
+                }
+            }
+            
+           }
+        }
+}
+@media  screen and (max-width:1000px){
+    .about-us{
+     .about-container{
+        flex-direction: column;
+        align-items: center;
+        width: 80%;
+        .ab-right{
+    order: 1;
+    width: 100%;
+        }
+        .ab-left{
+            order: 2;
+            width: 100%;
+        }
+    }
+    }
+}   

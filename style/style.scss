@@ -1,0 +1,223 @@
+html {
+    font-size: 62.5%;
+  }
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  $bg-black-gradient:radial-gradient(#525252, #131313);
+  $bg-primary:  #212222;
+  $bg-secondary:#2f3030;
+  $text-color:rgb(255, 255, 255);
+  $primaryColor: #e0a80d;
+  $greyDark: #7d8792;
+  $headingColor: #2d2e2e;
+  $white: #fff;
+  $black: #000;
+  $sliver: #bac8d3;
+
+  // $bg-black-gradient:white;
+  body {
+    color: white;
+    font-family: "Montserrat", sans-serif;
+    overflow-x: none; 
+}
+.front{
+  background:$bg-secondary  ;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed
+
+}
+ 
+  @import "home";
+  @import "header";
+  @import "services";
+  @import "about";
+@import "footer";
+@import "feature";
+@import "process";
+@import "aboutpage";
+@import "contact";
+@import"contact-page";
+@import"services-singlepage";
+ 
+  
+  h1 {
+    font-size: 2.5rem;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  }
+  h2 {
+    font-size: 8rem;
+    font-family: 'Poppins', sans-serif;
+   font-weight:600;
+  }
+  h3 {
+    font-size: 3.5rem;
+  }
+  h4 {
+    font-size: 3rem;
+  }
+  p {
+    font-size: 2rem;
+  }
+  
+  li {
+    font-size: 2rem;
+  }
+  a {
+    color: white;
+    text-decoration: none;
+  }
+  
+
+
+  .chat{
+    position:fixed;
+    bottom: 20px;
+  z-index: 1000;
+  right: 20px;
+  img{
+    width: 30px;
+    height: auto;
+  }
+  }
+  // ---------navbar----------------
+  @media (max-width: 868px) {
+    nav {
+      padding: 0 15px;
+    }
+    body.disabled {
+      overflow: hidden;
+    }
+    .icon {
+      display: block;
+      z-index: 100;
+    }
+    .icon.hide {
+      display: none;
+    }
+    .navbar .menu-list {
+      position: fixed;
+      height: 100vh;
+      width: 100%;
+      max-width: 400px;
+      left: -100%;
+      top: 0px;
+      display: block;
+      padding: 40px 0;
+      text-align: center;
+      background:  $bg-black-gradient;
+      transition: all 0.3s ease;
+      text-align: justify;
+      padding: 50px;
+    }
+    .navbar .menu-list li a {
+      font-size: 23px;
+      margin-left: -100%;
+      transition: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    }
+    .navbar.show .menu-list {
+      left: -20px;
+    }
+    .navbar.show .menu-list li a {
+      margin-left: 0px;
+    }
+    .menu-list .c-btn{
+  margin-top: 20px;
+  margin-left: -0px;
+  
+   a {
+      background-color: #ffffff;
+  padding: 10px;
+  
+  padding-left:20px ;
+  padding-right: 20px;
+  color:rgb(255, 255, 255);
+  border-radius: 40px;
+  transition: 0.3s;
+  
+  }}
+  }
+
+
+// -------------navbar-------end----
+
+// ----------------home-----------and featured
+  @media screen and (max-width: 1200px) {
+    html {
+      font-size: 50%;
+    }
+    nav {
+      #logo {
+        flex: 1;
+      }
+      ul {
+        li {
+          margin-left: 5rem;
+        }
+      }
+    }
+    .showcase {
+      grid-template-columns: 10% 1fr 10%;
+      img {
+        width: 100%;
+        object-fit: contain;
+      }
+      img,
+      h2,
+      .info {
+        grid-column: 2/3;
+        text-align: center;
+      }
+    
+    }
+
+    .soon {
+      overflow: hidden;
+      img {
+        width: 60%;
+      }
+      h2 {
+        font-size: 5rem;
+        text-align: center;
+      }
+    }
+    footer {
+      h1 {
+        flex: 1;
+      }
+    }
+  }
+  @media screen and (max-width:1000px){
+  .services {
+    align-items: center;
+    
+    h2 {
+      margin-top: 5rem;
+    }
+    .cards {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      width: 100%;
+      .card {
+        width: 90%;
+        margin: 2rem ;
+      }
+    }
+  }
+}
+  
+  h2,h3,h4,h5,h6,p,h1,li,ul,a{
+    color: rgb(255, 255, 255);
+  }
+  h2{
+    font-size: 3rem;
+    color: $primaryColor;
+  }
